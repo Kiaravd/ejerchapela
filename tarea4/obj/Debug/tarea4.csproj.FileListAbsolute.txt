@@ -1,0 +1,7 @@
+C:\Users\kiara\Desktop\ejerchapela\tarea4\bin\Debug\tarea4.exe.config
+C:\Users\kiara\Desktop\ejerchapela\tarea4\bin\Debug\tarea4.exe
+C:\Users\kiara\Desktop\ejerchapela\tarea4\bin\Debug\tarea4.pdb
+C:\Users\kiara\Desktop\ejerchapela\tarea4\obj\Debug\tarea4.csproj.AssemblyReference.cache
+C:\Users\kiara\Desktop\ejerchapela\tarea4\obj\Debug\tarea4.csproj.CoreCompileInputs.cache
+C:\Users\kiara\Desktop\ejerchapela\tarea4\obj\Debug\tarea4.exe
+C:\Users\kiara\Desktop\ejerchapela\tarea4\obj\Debug\tarea4.pdb
