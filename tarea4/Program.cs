@@ -12,126 +12,139 @@ namespace tarea4
         {
             int sucursal_elegida;
             string nombre;
+            string afirmar;
+            bool[] consulta = { false, false, false, false };
             sucursal[] sucur = new sucursal[4];
-            Console.WriteLine("¿A cuál sucursal desea ingresar? (ingrese solo el número)");
-            Console.WriteLine("Sucursal 1: Almagro");
-            Console.WriteLine("Sucursal 2: Balvanera");
-            Console.WriteLine("Sucursal 3: Caballito");
-            Console.WriteLine("Sucursal 4: Microcentro");
-            sucursal_elegida = Convert.ToInt32(Console.ReadLine());
-            switch (sucursal_elegida)
+            do 
             {
-                case 1:
-                    if (true)
-                    {
-                        Console.WriteLine("Usted ingresó a la sucursal 1: Almagro");
-                        Console.WriteLine("Ingresar cantidad de empleados: ");
-                        int intermediario = Convert.ToInt16(Console.ReadLine());
-                        sucur[0] = new sucursal(intermediario);
-                        sucur[0].cantidad_empleados = intermediario;
-                        sucur[0].numero_sucursal = 1;
-                        Console.WriteLine("Ingresar monto de venta: ");
-                        sucur[0].monto_venta = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Ingresar cantidad de clientes que compraron este mes: ");
-                        sucur[0].cantidad_clientes_mes = Convert.ToInt32(Console.ReadLine());
-                        for (int i = 0; i < sucur[0].cantidad_empleados; i++)
+                Console.WriteLine("¿A cuál sucursal desea ingresar? (ingrese solo el número)");
+                Console.WriteLine("Sucursal 1: Almagro");
+                Console.WriteLine("Sucursal 2: Balvanera");
+                Console.WriteLine("Sucursal 3: Caballito");
+                Console.WriteLine("Sucursal 4: Microcentro");
+                sucursal_elegida = Convert.ToInt32(Console.ReadLine());
+                switch (sucursal_elegida)
+                {
+                    case 1:
+                        if (consulta[0] == false)
                         {
-                            Console.WriteLine("Ingrese nombre del empleado {0}", (i + 1));
-                            nombre = Console.ReadLine();
-                            sucur[0].nombreEmpleados[i] = nombre;
+                            Console.WriteLine("Usted ingresó a la sucursal 1: Almagro");
+                            Console.WriteLine("Ingresar cantidad de empleados: ");
+                            int intermediario = Convert.ToInt16(Console.ReadLine());
+                            sucur[0] = new sucursal(intermediario);
+                            sucur[0].cantidad_empleados = intermediario;
+                            sucur[0].numero_sucursal = 1;
+                            Console.WriteLine("Ingresar monto de venta: ");
+                            sucur[0].monto_venta = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Ingresar cantidad de clientes que compraron este mes: ");
+                            sucur[0].cantidad_clientes_mes = Convert.ToInt32(Console.ReadLine());
+                            for (int i = 0; i < sucur[0].cantidad_empleados; i++)
+                            {
+                                Console.WriteLine("Ingrese nombre del empleado {0}", (i + 1));
+                                nombre = Console.ReadLine();
+                                sucur[0].nombreEmpleados[i] = nombre;
+                            }
+                           
+                            consulta[0] = true;
                         }
-                        sucur[0].mostrarInfo();
-                        sucur[0].nombreEmp(sucur[0].cantidad_empleados);
-                    }
-                    else
-                    {
-
-                    }
-                    break;
-                case 2:
-                    if (true)
-                    {
-                        Console.WriteLine("Usted ingresó a la sucursal 2: Balvanera");
-                        Console.WriteLine("Ingresar cantidad de empleados: ");
-                        int intermediario = Convert.ToInt16(Console.ReadLine());
-                        sucur[1] = new sucursal(intermediario);
-                        sucur[1].cantidad_empleados = intermediario;
-                        sucur[1].numero_sucursal = 2;
-                        Console.WriteLine("Ingresar monto de venta: ");
-                        sucur[1].monto_venta = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Ingresar cantidad de clientes que compraron este mes: ");
-                        sucur[1].cantidad_clientes_mes = Convert.ToInt32(Console.ReadLine());
-                        for (int i = 0; i < sucur[1].cantidad_empleados; i++)
+                        else
                         {
-                            Console.WriteLine("Ingrese nombre del empleado {0}", (i + 1));
-                            nombre = Console.ReadLine();
-                            sucur[1].nombreEmpleados[i] = nombre;
+                            Console.WriteLine("Ya ingresó los datos de esta sucursal.");
                         }
-                        sucur[1].mostrarInfo();
-                        sucur[1].nombreEmp(sucur[1].cantidad_empleados);
-                    }
-                    else
-                    {
-
-                    }
-                    break;
-                case 3:
-                    if (true)
-                    {
-                        Console.WriteLine("Usted ingresó a la sucursal 3: Caballito");
-                        Console.WriteLine("Ingresar cantidad de empleados: ");
-                        int intermediario = Convert.ToInt16(Console.ReadLine());
-                        sucur[2] = new sucursal(intermediario);
-                        sucur[2].cantidad_empleados = intermediario;
-                        sucur[2].numero_sucursal = 3;
-                        Console.WriteLine("Ingresar monto de venta: ");
-                        sucur[2].monto_venta = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Ingresar cantidad de clientes que compraron este mes: ");
-                        sucur[2].cantidad_clientes_mes = Convert.ToInt32(Console.ReadLine());
-                        for (int i = 0; i < sucur[2].cantidad_empleados; i++)
+                        break;
+                    case 2:
+                        if (consulta[1] == false)
                         {
-                            Console.WriteLine("Ingrese nombre del empleado {0}", (i + 1));
-                            nombre = Console.ReadLine();
-                            sucur[2].nombreEmpleados[i] = nombre;
+                            Console.WriteLine("Usted ingresó a la sucursal 2: Balvanera");
+                            Console.WriteLine("Ingresar cantidad de empleados: ");
+                            int intermediario = Convert.ToInt16(Console.ReadLine());
+                            sucur[1] = new sucursal(intermediario);
+                            sucur[1].cantidad_empleados = intermediario;
+                            sucur[1].numero_sucursal = 2;
+                            Console.WriteLine("Ingresar monto de venta: ");
+                            sucur[1].monto_venta = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Ingresar cantidad de clientes que compraron este mes: ");
+                            sucur[1].cantidad_clientes_mes = Convert.ToInt32(Console.ReadLine());
+                            for (int i = 0; i < sucur[1].cantidad_empleados; i++)
+                            {
+                                Console.WriteLine("Ingrese nombre del empleado {0}", (i + 1));
+                                nombre = Console.ReadLine();
+                                sucur[1].nombreEmpleados[i] = nombre;
+                            }
+                           
+                            consulta[1] = true;
                         }
-                        sucur[2].mostrarInfo();
-                        sucur[2].nombreEmp(sucur[2].cantidad_empleados);
-                    }
-                    else
-                    {
-
-                    }
-                    break;
-                case 4:
-                    if (true)
-                    {
-                        Console.WriteLine("Usted ingresó a la sucursal 4: Microcentro");
-                        Console.WriteLine("Ingresar cantidad de empleados: ");
-                        int intermediario = Convert.ToInt16(Console.ReadLine());
-                        sucur[3] = new sucursal(intermediario);
-                        sucur[3].cantidad_empleados = intermediario;
-                        sucur[3].numero_sucursal = 4;
-                        Console.WriteLine("Ingresar monto de venta: ");
-                        sucur[3].monto_venta = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Ingresar cantidad de clientes que compraron este mes: ");
-                        sucur[3].cantidad_clientes_mes = Convert.ToInt32(Console.ReadLine());
-                        for (int i = 0; i < sucur[3].cantidad_empleados; i++)
+                        else
                         {
-                            Console.WriteLine("Ingrese nombre del empleado {0}", (i + 1));
-                            nombre = Console.ReadLine();
-                            sucur[3].nombreEmpleados[i] = nombre;
+                            Console.WriteLine("Ya ingresó los datos de esta sucursal.");
                         }
-                        sucur[3].mostrarInfo();
-                        sucur[3].nombreEmp(sucur[3].cantidad_empleados);
-                    }
-                    else
-                    {
+                        break;
+                    case 3:
+                        if (consulta[2] == false)
+                        {
+                            Console.WriteLine("Usted ingresó a la sucursal 3: Caballito");
+                            Console.WriteLine("Ingresar cantidad de empleados: ");
+                            int intermediario = Convert.ToInt16(Console.ReadLine());
+                            sucur[2] = new sucursal(intermediario);
+                            sucur[2].cantidad_empleados = intermediario;
+                            sucur[2].numero_sucursal = 3;
+                            Console.WriteLine("Ingresar monto de venta: ");
+                            sucur[2].monto_venta = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Ingresar cantidad de clientes que compraron este mes: ");
+                            sucur[2].cantidad_clientes_mes = Convert.ToInt32(Console.ReadLine());
+                            for (int i = 0; i < sucur[2].cantidad_empleados; i++)
+                            {
+                                Console.WriteLine("Ingrese nombre del empleado {0}", (i + 1));
+                                nombre = Console.ReadLine();
+                                sucur[2].nombreEmpleados[i] = nombre;
+                            }
+                            consulta[2] = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ya ingresó los datos de esta sucursal.");
+                        }
+                        break;
+                    case 4:
+                        if (consulta[3] == false)
+                        {
+                            Console.WriteLine("Usted ingresó a la sucursal 4: Microcentro");
+                            Console.WriteLine("Ingresar cantidad de empleados: ");
+                            int intermediario = Convert.ToInt16(Console.ReadLine());
+                            sucur[3] = new sucursal(intermediario);
+                            sucur[3].cantidad_empleados = intermediario;
+                            sucur[3].numero_sucursal = 4;
+                            Console.WriteLine("Ingresar monto de venta: ");
+                            sucur[3].monto_venta = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Ingresar cantidad de clientes que compraron este mes: ");
+                            sucur[3].cantidad_clientes_mes = Convert.ToInt32(Console.ReadLine());
+                            for (int i = 0; i < sucur[3].cantidad_empleados; i++)
+                            {
+                                Console.WriteLine("Ingrese nombre del empleado {0}", (i + 1));
+                                nombre = Console.ReadLine();
+                                sucur[3].nombreEmpleados[i] = nombre;
+                            }
+                            
+                            consulta[3] = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ya ingresó los datos de esta sucursal.");
+                        }
+                        break;
+                }
+                Console.WriteLine("¿Desea agregar otra?");
+                afirmar = Console.ReadLine();
+            } while (afirmar == "si" || afirmar == "Si" || afirmar == "sI" || afirmar == "SI" || afirmar == "Sí");
 
-                    }
-                    break;
+            for( int j = 0; j < consulta.Length; j++)
+            {
+                if (consulta[j] == true)
+                {
+                    sucur[j].mostrarInfo(j);
+                    sucur[j].nombreEmp(sucur[j].cantidad_empleados);
+                }
             }
-
-
 
         }
         public class sucursal
@@ -156,17 +169,17 @@ namespace tarea4
             //▪ Determinar la venta máxima y que sucursal es.
             //▪ Determinar la venta mínima y que sucursal es.
             // metodos 
-            public void mostrarInfo()
+            public void mostrarInfo(int cant)
             {
-                Console.WriteLine("Número de sucursal {0}", numero_sucursal);
+                Console.WriteLine("Número de sucursal {0} en {1}", numero_sucursal, barrio[cant]);
                 Console.WriteLine("Monto de venta: {0}", monto_venta);
                 Console.WriteLine("Cantidad de empleados: {0}", cantidad_empleados);
                 Console.WriteLine("Clientes del mes: {0}", cantidad_clientes_mes);
-
             }
             public void nombreEmp(int cant)
             {
                 for (int i = 0; i < cant; i++) Console.WriteLine("Empleado {0}: {1} ", (i + 1), nombreEmpleados[i]);
+                Console.WriteLine("-----------------------------");
             }
             public void promedio_ventas() { }
             public void promedio_empleados() { }
